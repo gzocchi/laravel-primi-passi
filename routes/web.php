@@ -14,5 +14,25 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    $data = [
+        "info" => [
+            "title" => "Laravel Primi Passi",
+            "logo" => "https://www.laramind.com/blog/wp-content/uploads/2017/06/LaravelLogo.png",
+        ],
+        "links" => [
+            "docs" => "https://laravel.com/docs",
+            "laracasts" => "https://laracasts.com",
+            "news" => "https://laravel-news.com",
+            "blog" => "https://blog.laravel.com",
+            "nova" => "https://nova.laravel.com",
+            "forge" => "https://forge.laravel.com",
+            "vapor" => "https://vapor.laravel.com",
+            "github" => "https://github.com/laravel/laravel",
+        ],
+        "user" => [
+            "name" => "gzocchi",
+            "url" => "https://github.com/gzocchi"
+        ]
+    ];
+    return view('home', $data);
 });
