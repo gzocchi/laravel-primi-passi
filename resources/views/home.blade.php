@@ -65,7 +65,7 @@
         <div class="flex-center position-ref full-height">
             <div class="content">
 
-                <img class="m-b-md" src="{{ $info["logo"] }}" alt="{{$info["title"]}}">
+                <img class="m-b-md" src="{{ $info['logo'] }}" alt="{{$info['title']}}">
 
                 <div class="title m-b-md">
                     {{$info["title"]}}
@@ -75,7 +75,7 @@
                     @forelse ($links as $key => $link)
                         <a href="{{ $link }}" target="_blank">{{ $key }}</a>
                     @empty
-                        <a href="{{ $user["url"] }}" target="_blank">{{ $user["name"] }}</a>
+                        <a href="{{ $user['url'] }}" target="_blank">{{ $user["name"] }}</a>
                     @endforelse
                 </div>
 
